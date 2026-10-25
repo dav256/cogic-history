@@ -133,6 +133,28 @@
   .upd .src:hover{text-decoration:underline}
   .loading{color:var(--muted);padding:1.2rem 0;font-size:.92rem}
 
+
+  /* newsroom cards + pill */
+  .pill{display:inline-block;background:var(--ink);color:var(--paper);padding:.85rem 1.7rem;border-radius:999px;text-decoration:none;font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;margin:0 0 3rem;transition:background .3s ease}
+  .pill:hover{background:var(--gold)}
+  .news-intro{color:var(--muted);line-height:1.75;max-width:70ch;margin-bottom:1.8rem;font-size:.97rem}
+  .news-intro b{color:var(--ink)}
+  .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem 1.2rem;margin-bottom:3rem}
+  @media(max-width:860px){.news-grid{grid-template-columns:1fr}}
+  .nwrap.wide{grid-column:1/-1}
+  .ncard{position:relative;border-radius:12px;overflow:hidden;display:block;text-decoration:none;background:#e7dfcd}
+  .ncard img{width:100%;height:280px;object-fit:cover;transition:transform .8s cubic-bezier(.19,.7,.22,1)}
+  .nwrap.wide .ncard img{height:440px}
+  @media(max-width:860px){.ncard img,.nwrap.wide .ncard img{height:250px}}
+  .ncard:hover img{transform:scale(1.04)}
+  .ncard .ov{position:absolute;inset:auto 0 0 0;padding:2.4rem 1.2rem 1.05rem;background:linear-gradient(transparent,rgba(15,12,8,.85));color:#fff;opacity:0;transform:translateY(8px);transition:opacity .35s ease,transform .35s ease}
+  .ncard:hover .ov,.ncard:focus-visible .ov{opacity:1;transform:none}
+  .ncard .ov h4{font-family:var(--serif);font-weight:500;font-size:1.3rem;line-height:1.3;margin-bottom:.5rem}
+  .nwrap.wide .ov h4{font-size:1.6rem}
+  .ncard .ov .tags{display:flex;gap:.4rem;flex-wrap:wrap}
+  .ncard .ov .tags span{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,255,255,.55);padding:.17rem .55rem;border-radius:999px}
+  .ncap{color:var(--muted);font-size:.82rem;line-height:1.65;margin-top:.6rem}
+  .ncap b{color:var(--ink);font-weight:600}
   footer.site{margin-top:6.5rem;border-top:1px solid var(--ink);padding:2.6rem 0 3rem}
   footer.site .cols{display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:start}
   @media(max-width:700px){footer.site .cols{grid-template-columns:1fr}}
@@ -227,6 +249,7 @@
       <p>From a cotton gin in Lexington, Mississippi, to Mason Temple in Memphis and congregations around the world — the story of the largest African American Pentecostal church, and of its founder, Bishop Charles Harrison Mason.</p>
       <p class="side">A Pentecostal–Holiness movement born in revival: Baptist preachers expelled for preaching sanctification, a five-week visit to Azusa Street that changed everything, and a temple built by sharecroppers' dimes. Told here in chapters, pictures, and a living feed of updates.</p>
     </div>
+    <a class="pill" href="#story">Start with the story</a>
   </div>
   <figure class="hero-img">
     <img data-plx="0.10" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Mason_Temple%2C_Church_of_God_in_Christ_Memphis%2C_Tennessee.jpg/1920px-Mason_Temple%2C_Church_of_God_in_Christ_Memphis%2C_Tennessee.jpg" alt="Mason Temple, world headquarters of the Church of God in Christ, Memphis, Tennessee">
@@ -346,7 +369,39 @@
 <section id="updates">
   <div class="wrap">
     <div class="head reveal"><h2>Updates</h2><span>Chapter 05 · Live</span></div>
-    <p class="how">Two feeds, one page. <b>COGIC Updates</b> are curated entries stored in a small data file (<code>updates.json</code>) in this site's repository — add a dated entry there and it appears here automatically, newest first, each one linked to its source. <b>Website Updates</b> are pulled live from GitHub every time this page loads, so every change to the site shows up here on its own. For the denomination's own newsroom, see <a href="https://www.cogic.org/blog/category/church-of-god-in-christ/" target="_blank" rel="noopener">cogic.org</a>.</p>
+    <p class="how">What's happening in the church right now, and what's changed on this site. Church news comes from the <b>COGIC Newsroom</b> — the denomination's own NewsFeed at cogic.org — and every change to this page posts itself here from GitHub.</p>
+
+    <p class="news-intro"><b>From the Newsroom.</b> Fresh posts from the COGIC NewsFeed — hover a card to read more, select it to open the story at cogic.org.</p>
+    <div class="news-grid">
+      <div class="nwrap wide">
+        <a class="ncard" href="https://www.cogic.org/blog/a-moment-of-honor-a-moment-of-humility/" target="_blank" rel="noopener">
+          <img src="https://www.cogic.org/wp-content/uploads/2026/09/BOB-Conference-2026-feature.jpg" alt="Presiding Bishop Emeritus Charles E. Blake Sr. seated with Presiding Bishop J. Drew Sheard">
+          <span class="ov"><h4>A Moment of Honor, A Moment of Humility</h4><span class="tags"><span>Board of Bishops</span><span>Newsroom</span></span></span>
+        </a>
+        <p class="ncap"><b>September 2026.</b> The Board of Bishops pauses to honor Presiding Bishop Emeritus Charles E. Blake Sr. — with Bishop Sheard himself giving up the Presiding Bishop's chair for the man who shepherded the church before him. Photo: COGIC Newsroom.</p>
+      </div>
+      <div class="nwrap">
+        <a class="ncard" href="https://www.cogic.org/blog/118th-holy-convocation-newsletter/" target="_blank" rel="noopener">
+          <img src="https://www.cogic.org/wp-content/uploads/2026/10/feature-HC2026.jpg" alt="118th Holy Convocation artwork with the COGIC seal and St. Louis skyline">
+          <span class="ov"><h4>118th Holy Convocation</h4><span class="tags"><span>Convocation</span><span>St. Louis</span></span></span>
+        </a>
+        <p class="ncap"><b>Nov 3–10, 2026 · St. Louis.</b> The church's largest gathering returns to St. Louis. Artwork: COGIC Newsroom.</p>
+      </div>
+      <div class="nwrap">
+        <a class="ncard" href="https://www.cogic.org/blog/2026-mason-day-celebration/" target="_blank" rel="noopener">
+          <img src="https://www.cogic.org/wp-content/uploads/2026/08/feature-Mason-Day-2026.jpg" alt="Mason Day Celebration flyer with Bishop Mason, Bishop Sheard, and Bishop Porter">
+          <span class="ov"><h4>Mason Day Celebration</h4><span class="tags"><span>Mason Temple</span><span>Memphis</span></span></span>
+        </a>
+        <p class="ncap"><b>Sept 3, 2026 · Mason Temple.</b> A night at the historic temple honoring the founder. Flyer: COGIC Newsroom.</p>
+      </div>
+      <div class="nwrap">
+        <a class="ncard" href="https://www.cogic.org/blog/2026-cogic-counts-getting-souls-to-the-polls/" target="_blank" rel="noopener">
+          <img src="https://www.cogic.org/wp-content/uploads/2026/10/feature-COGIC-Counts.jpg" alt="COGIC Counts — Getting Souls to the Polls campaign artwork">
+          <span class="ov"><h4>COGIC Counts: Souls to the Polls</h4><span class="tags"><span>Civic</span><span>Your Voice · Your Vote</span></span></span>
+        </a>
+        <p class="ncap"><b>2026 midterms.</b> The church mobilizes saints to vote — even with thousands gathered in St. Louis on Election Day. Artwork: COGIC Newsroom.</p>
+      </div>
+    </div>
     <div class="upd-grid">
       <div class="upd-col">
         <h3>COGIC Updates</h3>
