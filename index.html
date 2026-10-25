@@ -171,7 +171,6 @@
   @keyframes pageIn{from{opacity:0}to{opacity:1}}
   ::selection{background:var(--gold);color:#fff}
   section{scroll-margin-top:5rem}
-  #progress{position:fixed;top:0;left:0;height:2px;background:var(--gold);width:0;z-index:60}
   nav{transition:box-shadow .3s ease}
   nav .in{transition:padding .3s ease}
   nav.scrolled{box-shadow:0 6px 24px rgba(23,20,16,.08)}
@@ -227,7 +226,6 @@
 </style>
 </head>
 <body>
-<div id="progress"></div>
 
 <nav>
   <div class="in">
@@ -244,7 +242,7 @@
 <header id="top">
   <div class="wrap">
     <div class="kicker"><span>An editorial history</span><span>Est. 1897 · Memphis, Tennessee</span></div>
-    <h1><span class="line"><span class="li">Church of God</span></span><br><span class="line"><span class="li d2">in <em>Christ.</em></span></span></h1>
+    <h1>The Church of<br>God in Christ</h1>
     <div class="intro">
       <p>From a cotton gin in Lexington, Mississippi, to Mason Temple in Memphis and congregations around the world — the story of the largest African American Pentecostal church, and of its founder, Bishop Charles Harrison Mason.</p>
       <p class="side">A Pentecostal–Holiness movement born in revival: Baptist preachers expelled for preaching sanctification, a five-week visit to Azusa Street that changed everything, and a temple built by sharecroppers' dimes. Told here in chapters, pictures, and a living feed of updates.</p>
@@ -252,16 +250,16 @@
     <a class="pill" href="#story">Start with the story</a>
   </div>
   <figure class="hero-img">
-    <img data-plx="0.10" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Mason_Temple%2C_Church_of_God_in_Christ_Memphis%2C_Tennessee.jpg/1920px-Mason_Temple%2C_Church_of_God_in_Christ_Memphis%2C_Tennessee.jpg" alt="Mason Temple, world headquarters of the Church of God in Christ, Memphis, Tennessee">
+    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Mason_Temple%2C_Church_of_God_in_Christ_Memphis%2C_Tennessee.jpg/1920px-Mason_Temple%2C_Church_of_God_in_Christ_Memphis%2C_Tennessee.jpg" alt="Mason Temple, world headquarters of the Church of God in Christ, Memphis, Tennessee">
     <figcaption class="wrap"><b>Mason Temple, Memphis.</b> World headquarters of the Church of God in Christ. Photo by Jim Roberts, CC BY-SA 4.0, via Wikimedia Commons.</figcaption>
   </figure>
-<div class="marquee" aria-hidden="true"><div class="mq-track"><span>Holiness <b>·</b> Pentecost <b>·</b> Est. 1897 <b>·</b> Memphis, Tennessee <b>·</b> Mason Temple <b>·</b> Azusa Street <b>·</b> </span><span>Holiness <b>·</b> Pentecost <b>·</b> Est. 1897 <b>·</b> Memphis, Tennessee <b>·</b> Mason Temple <b>·</b> Azusa Street <b>·</b> </span></div></div>
+</div>
   <div class="wrap">
     <div class="stats">
-      <div><b data-count="1897">0</b><span>Founded</span></div>
-      <div><b><span data-count="6.5" data-dec="1">0</span>M</b><span>Members reported</span></div>
-      <div><b><span data-count="100">0</span>+</b><span>Countries reached</span></div>
-      <div><b data-count="1907">0</b><span>Organized · Memphis</span></div>
+      <div><b>1897</b><span>Founded</span></div>
+      <div><b>6.5M</b><span>Members reported</span></div>
+      <div><b>100+</b><span>Countries reached</span></div>
+      <div><b>1907</b><span>Organized · Memphis</span></div>
     </div>
     <div class="index">
       <a href="#story"><span class="n">01</span><span class="t">The Story</span><span class="tag">Mason · Jones · Azusa</span></a>
@@ -319,7 +317,7 @@
   <div class="wrap">
     <div class="head reveal"><h2>Mason Temple</h2><span>Chapter 03 · Memphis</span></div>
     <figure class="temple-img reveal">
-      <img data-plx="0.06" src="https://bunny-wp-pullzone-cjamrcljf0.b-cdn.net/wp-content/uploads/2021/02/elder-kelsey-church-of-god-in-christ_001-600x338.jpg" alt="Elder Samuel Kelsey preaching at a Church of God in Christ service in Mississippi, 1942">
+      <img src="https://bunny-wp-pullzone-cjamrcljf0.b-cdn.net/wp-content/uploads/2021/02/elder-kelsey-church-of-god-in-christ_001-600x338.jpg" alt="Elder Samuel Kelsey preaching at a Church of God in Christ service in Mississippi, 1942">
       <figcaption><b>Worship, 1942.</b> Elder Samuel Kelsey preaching at a Church of God in Christ service in Leake County, Mississippi. Photo: Library of Congress, via the New Georgia Encyclopedia.</figcaption>
     </figure>
     <div class="temple-grid">
@@ -425,8 +423,7 @@
       COGIC · A History — built by <a href="https://github.com/dav256">dav256</a>
     </p>
   </div>
-  <div class="bigword" aria-hidden="true">COGIC</div>
-</footer>
+  </footer>
 
 <script>
   const fmt = d => new Date(d + (d.length === 10 ? "T12:00:00" : "")).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
@@ -474,40 +471,8 @@
 </script>
 
 <script>
-  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  // stagger timeline reveals
-  document.querySelectorAll(".tl .ev").forEach((el, i) => el.style.transitionDelay = Math.min(i * 60, 360) + "ms");
-  // animated counters
-  const cio = new IntersectionObserver(es => es.forEach(e => {
-    if (!e.isIntersecting) return; cio.unobserve(e.target);
-    const el = e.target, end = parseFloat(el.dataset.count), dec = +(el.dataset.dec || 0), t0 = performance.now();
-    if (reduce) { el.textContent = end.toFixed(dec); return; }
-    (function tick(t) {
-      const p = Math.min((t - t0) / 1500, 1), ease = 1 - Math.pow(1 - p, 3);
-      el.textContent = (end * ease).toFixed(dec);
-      if (p < 1) requestAnimationFrame(tick);
-    })(t0);
-  }), { threshold: .4 });
-  document.querySelectorAll("[data-count]").forEach(el => cio.observe(el));
-  // nav state, progress bar, parallax
-  const nav = document.querySelector("nav"), bar = document.getElementById("progress");
-  const plx = [...document.querySelectorAll("[data-plx]")];
-  let ticking = false;
-  function onScroll() {
-    const y = scrollY;
-    nav.classList.toggle("scrolled", y > 12);
-    const hgt = document.documentElement.scrollHeight - innerHeight;
-    bar.style.width = (hgt > 0 ? (y / hgt) * 100 : 0) + "%";
-    if (!reduce) plx.forEach(img => {
-      const r = img.parentElement.getBoundingClientRect();
-      if (r.bottom < 0 || r.top > innerHeight) return;
-      const off = (r.top + r.height / 2 - innerHeight / 2) * parseFloat(img.dataset.plx);
-      img.style.setProperty("--py", Math.max(-42, Math.min(42, off)) + "px");
-    });
-    ticking = false;
-  }
-  addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
-  onScroll();
+  const nav = document.querySelector("nav");
+  addEventListener("scroll", () => { nav.classList.toggle("scrolled", scrollY > 12); }, { passive: true });
 </script>
 </body>
 </html>
