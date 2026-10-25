@@ -1,13 +1,12 @@
 # cogic-history
 
-[![site live](https://img.shields.io/badge/site-live-brightgreen?style=for-the-badge&logo=github)](https://dav256.github.io/cogic-history/)
-![last commit](https://img.shields.io/github/last-commit/dav256/cogic-history?style=for-the-badge)
+[![site live](https://img.shields.io/badge/site-live-brightgreen?style=for-the-badge&logo=github)](https://dav256.github.io/cogic-history/) ![last commit](https://img.shields.io/github/last-commit/dav256/cogic-history?style=for-the-badge) ![GitHub stars](https://img.shields.io/github/stars/dav256/cogic-history?style=for-the-badge&logo=github) ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css&logoColor=white)
 
-> ### Live site — [dav256.github.io/cogic-history](https://dav256.github.io/cogic-history/)
+> **Live site:** Read the story at [dav256.github.io/cogic-history](https://dav256.github.io/cogic-history/).
 
-cogic-history tells the story of the Church of God in Christ — Bishop Charles Harrison Mason, Azusa Street, Mason Temple, and a movement that reached the world.
+**cogic-history tells the story of the Church of God in Christ — Bishop Charles Harrison Mason, Azusa Street, Mason Temple, and a movement that reached the world.**
 
-a single-page editorial site (light, image-led, oversized serif type) with the COGIC seal, historical photos, and a timeline from 1895 to today. plain html and css in one file, hosted on github pages.
+It is a single-page editorial site with light, image-led styling and oversized serif type. Historical photos, the COGIC seal, and a timeline carry the story from 1895 to today, while the Updates section keeps both church news and site changes visible.
 
 ## photos
 
