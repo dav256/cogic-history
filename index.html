@@ -143,9 +143,62 @@
   .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
   @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+  /* ---- motion & effects ---- */
+  ::selection{background:var(--gold);color:#fff}
+  section{scroll-margin-top:5rem}
+  #progress{position:fixed;top:0;left:0;height:2px;background:var(--gold);width:0;z-index:60}
+  nav{transition:box-shadow .3s ease}
+  nav .in{transition:padding .3s ease}
+  nav.scrolled{box-shadow:0 6px 24px rgba(23,20,16,.08)}
+  nav.scrolled .in{padding-top:.45rem;padding-bottom:.45rem}
+  nav .links a{position:relative;padding-bottom:2px}
+  nav .links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .35s ease}
+  nav .links a:hover::after{transform:scaleX(1);transform-origin:left}
+  .kicker{animation:fadeDown .9s ease .05s both}
+  header h1 .line{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em;margin-bottom:-.08em}
+  header h1 .li{display:inline-block;transform:translateY(112%);animation:riseUp 1.05s cubic-bezier(.19,.7,.22,1) forwards}
+  header h1 .li.d2{animation-delay:.14s}
+  @keyframes riseUp{to{transform:translateY(0)}}
+  @keyframes fadeDown{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+  .intro p{animation:fadeUp 1s ease .45s both}
+  .intro .side{animation-delay:.6s}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .hero-img{overflow:hidden;animation:heroClip 1.25s cubic-bezier(.19,.7,.22,1) .3s both}
+  @keyframes heroClip{from{clip-path:inset(10% 5% 10% 5%)}to{clip-path:inset(0 0 0 0)}}
+  .hero-img img{transform:scale(1.14) translateY(var(--py,0px));will-change:transform}
+  .temple-img{overflow:hidden}
+  .temple-img img,.story figure img{transition:transform 1s cubic-bezier(.19,.7,.22,1)}
+  .temple-img:hover img,.story figure:hover img{transform:scale(1.035)}
+  .temple-img img{transform:scale(1.1) translateY(var(--py,0px))}
+  .reveal img{clip-path:inset(0 0 100% 0);transition:clip-path 1.1s cubic-bezier(.19,.7,.22,1) .1s,transform 1s cubic-bezier(.19,.7,.22,1)}
+  .reveal.in img{clip-path:inset(0 0 0 0)}
+  .marquee{overflow:hidden;border-top:1px solid var(--ink);border-bottom:1px solid var(--line);margin-top:2.8rem;padding:.95rem 0}
+  .mq-track{display:flex;width:max-content;animation:mq 30s linear infinite}
+  .marquee:hover .mq-track{animation-play-state:paused}
+  .mq-track span{font-family:var(--serif);font-style:italic;font-size:1.3rem;white-space:nowrap;padding-right:.6rem;color:#37322a}
+  .mq-track b{color:var(--gold);font-style:normal;padding:0 .9rem}
+  @keyframes mq{to{transform:translateX(-50%)}}
+  .index a .t{transition:transform .3s ease}
+  .index a .t::after{content:" \2192";color:var(--gold);opacity:0;display:inline-block;transform:translateX(-10px);transition:opacity .3s ease,transform .3s ease}
+  .index a:hover .t{transform:translateX(6px)}
+  .index a:hover .t::after{opacity:1;transform:translateX(0)}
+  .card{transition:background .3s ease}
+  .card:hover{background:var(--paper2)}
+  .card:hover .icon{transform:translateY(-3px)}
+  .icon{transition:transform .3s ease}
+  .bigword{font-family:var(--serif);font-size:clamp(4.5rem,15vw,13rem);line-height:.9;text-align:center;color:transparent;-webkit-text-stroke:1px var(--line);margin-top:2.5rem;user-select:none}
+  @media(prefers-reduced-motion:reduce){
+    .mq-track{animation:none} .hero-img{animation:none}
+    header h1 .li{animation:none;transform:none}
+    .kicker,.intro p{animation:none}
+    .reveal img{clip-path:none;transition:none}
+    .hero-img img,.temple-img img{transform:none}
+  }
 </style>
 </head>
 <body>
+<div id="progress"></div>
 
 <nav>
   <div class="in">
@@ -162,22 +215,23 @@
 <header id="top">
   <div class="wrap">
     <div class="kicker"><span>An editorial history</span><span>Est. 1897 · Memphis, Tennessee</span></div>
-    <h1>Church of God<br>in <em>Christ.</em></h1>
+    <h1><span class="line"><span class="li">Church of God</span></span><br><span class="line"><span class="li d2">in <em>Christ.</em></span></span></h1>
     <div class="intro">
       <p>From a cotton gin in Lexington, Mississippi, to Mason Temple in Memphis and congregations around the world — the story of the largest African American Pentecostal church, and of its founder, Bishop Charles Harrison Mason.</p>
       <p class="side">A Pentecostal–Holiness movement born in revival: Baptist preachers expelled for preaching sanctification, a five-week visit to Azusa Street that changed everything, and a temple built by sharecroppers' dimes. Told here in chapters, pictures, and a living feed of updates.</p>
     </div>
   </div>
   <figure class="hero-img">
-    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Mason_Temple%2C_Church_of_God_in_Christ_Memphis%2C_Tennessee.jpg/1920px-Mason_Temple%2C_Church_of_God_in_Christ_Memphis%2C_Tennessee.jpg" alt="Mason Temple, world headquarters of the Church of God in Christ, Memphis, Tennessee">
+    <img data-plx="0.10" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Mason_Temple%2C_Church_of_God_in_Christ_Memphis%2C_Tennessee.jpg/1920px-Mason_Temple%2C_Church_of_God_in_Christ_Memphis%2C_Tennessee.jpg" alt="Mason Temple, world headquarters of the Church of God in Christ, Memphis, Tennessee">
     <figcaption class="wrap"><b>Mason Temple, Memphis.</b> World headquarters of the Church of God in Christ. Photo by Jim Roberts, CC BY-SA 4.0, via Wikimedia Commons.</figcaption>
   </figure>
+<div class="marquee" aria-hidden="true"><div class="mq-track"><span>Holiness <b>·</b> Pentecost <b>·</b> Est. 1897 <b>·</b> Memphis, Tennessee <b>·</b> Mason Temple <b>·</b> Azusa Street <b>·</b> </span><span>Holiness <b>·</b> Pentecost <b>·</b> Est. 1897 <b>·</b> Memphis, Tennessee <b>·</b> Mason Temple <b>·</b> Azusa Street <b>·</b> </span></div></div>
   <div class="wrap">
     <div class="stats">
-      <div><b>1897</b><span>Founded</span></div>
-      <div><b>6.5M</b><span>Members reported</span></div>
-      <div><b>100+</b><span>Countries reached</span></div>
-      <div><b>1907</b><span>Organized · Memphis</span></div>
+      <div><b data-count="1897">0</b><span>Founded</span></div>
+      <div><b><span data-count="6.5" data-dec="1">0</span>M</b><span>Members reported</span></div>
+      <div><b><span data-count="100">0</span>+</b><span>Countries reached</span></div>
+      <div><b data-count="1907">0</b><span>Organized · Memphis</span></div>
     </div>
     <div class="index">
       <a href="#story"><span class="n">01</span><span class="t">The Story</span><span class="tag">Mason · Jones · Azusa</span></a>
@@ -191,7 +245,7 @@
 
 <section id="story">
   <div class="wrap">
-    <div class="head"><h2>The Story</h2><span>Chapter 01</span></div>
+    <div class="head reveal"><h2>The Story</h2><span>Chapter 01</span></div>
     <div class="story">
       <figure class="reveal">
         <img src="https://sacredart.caaar.duke.edu/wp-content/uploads/2023/03/photo-of-bishop-c-mason-of-the-church-of-god-in-christ.original-1.jpg" alt="Framed portrait of Bishop Charles Harrison Mason">
@@ -217,7 +271,7 @@
 
 <section id="timeline">
   <div class="wrap">
-    <div class="head"><h2>Timeline</h2><span>Chapter 02 · 1895 — Today</span></div>
+    <div class="head reveal"><h2>Timeline</h2><span>Chapter 02 · 1895 — Today</span></div>
     <div class="tl">
       <div class="ev reveal"><div class="yr">1895</div><div><h3>Mason meets Jones</h3><p>Mason joins forces with Mississippi preacher Charles Price Jones. Together they preach holiness and sanctification across the South, until the Baptist convention expels them for it.</p></div></div>
       <div class="ev reveal"><div class="yr">1897</div><div><h3>A fellowship in Lexington</h3><p>Revivals in an abandoned cotton gin in Lexington, Mississippi, gather some sixty converts. Mason and Jones organize the fellowship that takes the name Church of God in Christ — Mason founds St. Paul Church in Lexington as its first congregation.</p></div></div>
@@ -233,9 +287,9 @@
 
 <section id="temple">
   <div class="wrap">
-    <div class="head"><h2>Mason Temple</h2><span>Chapter 03 · Memphis</span></div>
+    <div class="head reveal"><h2>Mason Temple</h2><span>Chapter 03 · Memphis</span></div>
     <figure class="temple-img reveal">
-      <img src="https://bunny-wp-pullzone-cjamrcljf0.b-cdn.net/wp-content/uploads/2021/02/elder-kelsey-church-of-god-in-christ_001-600x338.jpg" alt="Elder Samuel Kelsey preaching at a Church of God in Christ service in Mississippi, 1942">
+      <img data-plx="0.06" src="https://bunny-wp-pullzone-cjamrcljf0.b-cdn.net/wp-content/uploads/2021/02/elder-kelsey-church-of-god-in-christ_001-600x338.jpg" alt="Elder Samuel Kelsey preaching at a Church of God in Christ service in Mississippi, 1942">
       <figcaption><b>Worship, 1942.</b> Elder Samuel Kelsey preaching at a Church of God in Christ service in Leake County, Mississippi. Photo: Library of Congress, via the New Georgia Encyclopedia.</figcaption>
     </figure>
     <div class="temple-grid">
@@ -253,7 +307,7 @@
 
 <section id="legacy">
   <div class="wrap">
-    <div class="head"><h2>The Legacy</h2><span>Chapter 04 · Seal · Sound · Spirit</span></div>
+    <div class="head reveal"><h2>The Legacy</h2><span>Chapter 04 · Seal · Sound · Spirit</span></div>
     <div class="seal-row reveal">
       <img src="https://sgsjcogic.org/wp-content/uploads/2018/03/COGIC_SEAL.png" alt="The official seal of the Church of God in Christ, Inc.">
       <div>
@@ -284,7 +338,7 @@
 
 <section id="updates">
   <div class="wrap">
-    <div class="head"><h2>Updates</h2><span>Chapter 05 · Live</span></div>
+    <div class="head reveal"><h2>Updates</h2><span>Chapter 05 · Live</span></div>
     <p class="how">Two feeds, one page. <b>COGIC Updates</b> are curated entries stored in a small data file (<code>updates.json</code>) in this site's repository — add a dated entry there and it appears here automatically, newest first, each one linked to its source. <b>Website Updates</b> are pulled live from GitHub every time this page loads, so every change to the site shows up here on its own. For the denomination's own newsroom, see <a href="https://www.cogic.org/blog/category/church-of-god-in-christ/" target="_blank" rel="noopener">cogic.org</a>.</p>
     <div class="upd-grid">
       <div class="upd-col">
@@ -309,6 +363,7 @@
       COGIC · A History — built by <a href="https://github.com/dav256">dav256</a>
     </p>
   </div>
+  <div class="bigword" aria-hidden="true">COGIC</div>
 </footer>
 
 <script>
@@ -354,6 +409,43 @@
     if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
   }), { threshold: .08 });
   document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+</script>
+
+<script>
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // stagger timeline reveals
+  document.querySelectorAll(".tl .ev").forEach((el, i) => el.style.transitionDelay = Math.min(i * 60, 360) + "ms");
+  // animated counters
+  const cio = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return; cio.unobserve(e.target);
+    const el = e.target, end = parseFloat(el.dataset.count), dec = +(el.dataset.dec || 0), t0 = performance.now();
+    if (reduce) { el.textContent = end.toFixed(dec); return; }
+    (function tick(t) {
+      const p = Math.min((t - t0) / 1500, 1), ease = 1 - Math.pow(1 - p, 3);
+      el.textContent = (end * ease).toFixed(dec);
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }), { threshold: .4 });
+  document.querySelectorAll("[data-count]").forEach(el => cio.observe(el));
+  // nav state, progress bar, parallax
+  const nav = document.querySelector("nav"), bar = document.getElementById("progress");
+  const plx = [...document.querySelectorAll("[data-plx]")];
+  let ticking = false;
+  function onScroll() {
+    const y = scrollY;
+    nav.classList.toggle("scrolled", y > 12);
+    const hgt = document.documentElement.scrollHeight - innerHeight;
+    bar.style.width = (hgt > 0 ? (y / hgt) * 100 : 0) + "%";
+    if (!reduce) plx.forEach(img => {
+      const r = img.parentElement.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) return;
+      const off = (r.top + r.height / 2 - innerHeight / 2) * parseFloat(img.dataset.plx);
+      img.style.setProperty("--py", Math.max(-42, Math.min(42, off)) + "px");
+    });
+    ticking = false;
+  }
+  addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
 </script>
 </body>
 </html>
