@@ -1,4 +1,4 @@
-<h1><img src="https://sgsjcogic.org/wp-content/uploads/2018/03/COGIC_SEAL.png" width="56" alt="Seal of the Church of God in Christ"> cogic-history</h1>
+<h1><img src="https://sgsjcogic.org/wp-content/uploads/2018/03/COGIC_SEAL.png" width="56" align="middle" alt="Seal of the Church of God in Christ"> cogic-history</h1>
 
 [![site live](https://img.shields.io/badge/site-live-brightgreen?style=for-the-badge&logo=github)](https://dav256.github.io/cogic-history/) ![last commit](https://img.shields.io/github/last-commit/dav256/cogic-history?style=for-the-badge) ![GitHub stars](https://img.shields.io/github/stars/dav256/cogic-history?style=for-the-badge&logo=github) ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css&logoColor=white)
 
