@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>COGIC — A History of the Church of God in Christ</title>
-<meta name="description" content="An editorial history of the Church of God in Christ: Bishop Charles Harrison Mason, Azusa Street, Mason Temple, and a movement that reached the world. With live COGIC updates.">
+<title>COGIC NOW — What's Happening in the Church of God in Christ</title>
+<meta name="description" content="COGIC NOW: what's happening in the Church of God in Christ right now — the Holy Convocation, church news, statements, and what's ahead, gathered in one place.">
 <link rel="icon" href="https://sgsjcogic.org/wp-content/uploads/2018/03/COGIC_SEAL.png">
 <style>
   :root{
@@ -27,7 +27,7 @@
   nav{position:fixed;inset:0 0 auto 0;z-index:30;background:rgba(245,241,232,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
   nav .in{max-width:1240px;margin:0 auto;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
   .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
-  .brand img{width:36px;height:36px;border-radius:50%}
+  .brand img{width:38px;height:38px;object-fit:contain}
   .brand span{font-size:.8rem;letter-spacing:.3em;text-transform:uppercase}
   .brand b{color:var(--gold);font-weight:600}
   nav .links{display:flex;gap:1.8rem}
@@ -38,7 +38,7 @@
   /* hero */
   header{padding:9.5rem 0 0}
   .kicker{display:flex;justify-content:space-between;gap:1rem;color:var(--muted);font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;border-top:1px solid var(--ink);padding-top:1rem}
-  header h1{font-family:var(--serif);font-weight:500;font-size:clamp(3rem,9.2vw,7.6rem);line-height:.98;letter-spacing:-.01em;margin:2.2rem 0 1.6rem}
+  header h1{font-family:var(--serif);font-weight:500;font-size:clamp(3.4rem,11vw,9rem);line-height:.98;letter-spacing:-.01em;margin:2.2rem 0 1.6rem}
   header h1 em{font-style:italic;font-weight:400;color:var(--gold)}
   .intro{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:3rem}
   @media(max-width:760px){.intro{grid-template-columns:1fr}}
@@ -67,20 +67,18 @@
   .head h2{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4.6vw,3.2rem)}
   .head span{color:var(--muted);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase}
 
-  /* story */
-  .story{display:grid;grid-template-columns:.85fr 1.15fr;gap:3.5rem;align-items:start}
-  @media(max-width:860px){.story{grid-template-columns:1fr}}
-  .story figure{position:sticky;top:6.5rem}
-  @media(max-width:860px){.story figure{position:static}}
-  .story figure img{width:100%;border:1px solid var(--line)}
-  .story .txt p{font-size:1.05rem;line-height:1.85;color:#37322a}
-  .story .txt p+p{margin-top:1.1rem}
+  /* lead story */
+  .lead{display:grid;grid-template-columns:1.15fr .85fr;gap:3.5rem;align-items:start}
+  @media(max-width:860px){.lead{grid-template-columns:1fr}}
+  .lead .txt p{font-size:1.05rem;line-height:1.85;color:#37322a}
+  .lead .txt p+p{margin-top:1.1rem}
+  .lead .txt h3{font-family:var(--serif);font-weight:500;font-size:1.7rem;line-height:1.3;margin-bottom:1rem}
   .facts{margin-top:2.4rem;border-top:1px solid var(--ink)}
   .facts div{display:grid;grid-template-columns:170px 1fr;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--line);font-size:.95rem}
   .facts dt{color:var(--muted);letter-spacing:.18em;text-transform:uppercase;font-size:.7rem;padding-top:.2rem}
   .facts dd{font-family:var(--serif);font-size:1.05rem}
 
-  /* timeline */
+  /* what's ahead rows */
   .tl{border-top:1px solid var(--ink)}
   .ev{display:grid;grid-template-columns:190px 1fr;gap:2rem;padding:1.9rem .4rem;border-bottom:1px solid var(--line)}
   @media(max-width:700px){.ev{grid-template-columns:1fr;gap:.5rem}}
@@ -88,22 +86,7 @@
   .ev h3{font-family:var(--serif);font-weight:500;font-size:1.45rem;margin-bottom:.45rem}
   .ev p{color:#4a4436;line-height:1.8;max-width:62ch}
 
-  /* temple */
-  .temple-img img{width:100%;height:min(60vh,520px);object-fit:cover;object-position:center 30%}
-  .temple-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;margin-top:2.6rem;align-items:start}
-  @media(max-width:860px){.temple-grid{grid-template-columns:1fr}}
-  .temple-grid p{line-height:1.85;color:#37322a;font-size:1.02rem}
-  .temple-grid p+p{margin-top:1.1rem}
-  blockquote{font-family:var(--serif);font-size:clamp(1.4rem,2.6vw,1.9rem);line-height:1.45;font-style:italic;border-left:3px solid var(--gold);padding-left:1.4rem}
-  blockquote footer{font-family:var(--sans);font-style:normal;font-size:.85rem;color:var(--muted);margin-top:1rem;letter-spacing:.05em}
-
-  /* legacy + seal */
-  .seal-row{display:grid;grid-template-columns:300px 1fr;gap:3rem;align-items:center;margin-bottom:3rem}
-  @media(max-width:760px){.seal-row{grid-template-columns:1fr}.seal-row img{max-width:240px}}
-  .seal-row img{width:100%}
-  .seal-row h3{font-family:var(--serif);font-weight:500;font-size:1.8rem;margin-bottom:.7rem}
-  .seal-row p{line-height:1.85;color:#37322a}
-  .seal-row p+p{margin-top:.8rem}
+  /* leadership cards */
   .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--ink)}
   @media(max-width:860px){.cards{grid-template-columns:1fr}}
   .card{padding:1.8rem 1.6rem 2rem;border-right:1px solid var(--line)}
@@ -116,7 +99,7 @@
 
   /* updates */
   .how{color:var(--muted);line-height:1.75;max-width:70ch;margin-bottom:2.4rem;font-size:.97rem}
-  .how code{background:var(--paper2);border:1px solid var(--line);padding:.05rem .4rem;border-radius:3px;font-size:.85em}
+  .how b{color:var(--ink)}
   .upd-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3.5rem;align-items:start}
   @media(max-width:860px){.upd-grid{grid-template-columns:1fr}}
   .upd-col h3{font-size:.75rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--ink);padding-bottom:.8rem;margin-bottom:.4rem}
@@ -132,7 +115,6 @@
   .upd .src{display:inline-block;margin-top:.55rem;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:none}
   .upd .src:hover{text-decoration:underline}
   .loading{color:var(--muted);padding:1.2rem 0;font-size:.92rem}
-
 
   /* newsroom cards + pill */
   .pill{display:inline-block;background:var(--ink);color:var(--paper);padding:.85rem 1.7rem;border-radius:999px;text-decoration:none;font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;margin:0 0 3rem;transition:background .3s ease}
@@ -155,10 +137,11 @@
   .ncard .ov .tags span{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,255,255,.55);padding:.17rem .55rem;border-radius:999px}
   .ncap{color:var(--muted);font-size:.82rem;line-height:1.65;margin-top:.6rem}
   .ncap b{color:var(--ink);font-weight:600}
+
   footer.site{margin-top:6.5rem;border-top:1px solid var(--ink);padding:2.6rem 0 3rem}
   footer.site .cols{display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:start}
   @media(max-width:700px){footer.site .cols{grid-template-columns:1fr}}
-  footer.site img{width:74px;height:74px;border-radius:50%}
+  footer.site img.flogo{width:84px;height:84px;object-fit:contain}
   footer.site p{color:var(--muted);font-size:.84rem;line-height:1.9}
   footer.site a{color:var(--gold);text-decoration:none}
   footer.site a:hover{text-decoration:underline}
@@ -171,6 +154,7 @@
   @keyframes pageIn{from{opacity:0}to{opacity:1}}
   ::selection{background:var(--gold);color:#fff}
   section{scroll-margin-top:5rem}
+  #progress{position:fixed;top:0;left:0;height:2px;background:var(--gold);width:0;z-index:60}
   nav{transition:box-shadow .3s ease}
   nav .in{transition:padding .3s ease}
   nav.scrolled{box-shadow:0 6px 24px rgba(23,20,16,.08)}
@@ -190,12 +174,6 @@
   .hero-img{overflow:hidden;animation:heroClip 1.25s cubic-bezier(.19,.7,.22,1) .3s both}
   @keyframes heroClip{from{clip-path:inset(10% 5% 10% 5%)}to{clip-path:inset(0 0 0 0)}}
   .hero-img img{transform:scale(1.14) translateY(var(--py,0px));will-change:transform;-webkit-mask-image:linear-gradient(to bottom,#000 86%,transparent 100%);mask-image:linear-gradient(to bottom,#000 86%,transparent 100%)}
-  .temple-img{border-radius:12px}
-  .story figure img{border-radius:12px}
-  .temple-img{overflow:hidden}
-  .temple-img img,.story figure img{transition:transform 1s cubic-bezier(.19,.7,.22,1)}
-  .temple-img:hover img,.story figure:hover img{transform:scale(1.035)}
-  .temple-img img{transform:scale(1.1) translateY(var(--py,0px))}
   .reveal img{clip-path:inset(0 0 100% 0);transition:clip-path 1.1s cubic-bezier(.19,.7,.22,1) .1s,transform 1s cubic-bezier(.19,.7,.22,1)}
   .reveal.in img{clip-path:inset(0 0 0 0)}
   .marquee{overflow:hidden;border-top:1px solid var(--ink);border-bottom:1px solid var(--line);margin-top:2.8rem;padding:.95rem 0}
@@ -215,191 +193,93 @@
   footer.site{position:relative;overflow:hidden}
   footer.site::before{content:"";position:absolute;inset:0;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/></filter><rect width="160" height="160" filter="url(%23n)" opacity="0.5"/></svg>');opacity:.06;pointer-events:none}
   footer.site .cols,footer.site .bigword{position:relative}
-  .bigword{font-family:var(--serif);font-size:clamp(4.5rem,15vw,13rem);line-height:.9;text-align:center;color:transparent;-webkit-text-stroke:1px var(--line);margin-top:2.5rem;user-select:none}
+  .bigword{font-family:var(--serif);font-size:clamp(3.2rem,11.5vw,10.5rem);line-height:.9;text-align:center;color:transparent;-webkit-text-stroke:1px var(--line);margin-top:2.5rem;user-select:none;white-space:nowrap}
   @media(prefers-reduced-motion:reduce){
     body{animation:none} .mq-track{animation:none} .hero-img{animation:none}
     header h1 .li{animation:none;transform:none}
     .kicker,.intro p{animation:none}
     .reveal img{clip-path:none;transition:none}
-    .hero-img img,.temple-img img{transform:none}
+    .hero-img img{transform:none}
   }
 </style>
 </head>
 <body>
+<div id="progress"></div>
 
 <nav>
   <div class="in">
     <a class="brand" href="#top">
-      <img src="https://sgsjcogic.org/wp-content/uploads/2018/03/COGIC_SEAL.png" alt="Seal of the Church of God in Christ">
-      <span>COGIC <b>· A History</b></span>
+      <img src="logo.png" alt="COGIC NOW logo" onerror="this.remove()">
+      <span>COGIC <b>NOW</b></span>
     </a>
     <div class="links">
-      <a href="#story">Story</a><a href="#timeline">Timeline</a><a href="#temple">Temple</a><a href="#legacy">Legacy</a><a href="#updates">Updates</a>
+      <a href="#now">Now</a><a href="#latest">Latest</a><a href="#newsroom">Newsroom</a><a href="#ahead">Ahead</a>
     </div>
   </div>
 </nav>
 
 <header id="top">
   <div class="wrap">
-    <div class="kicker"><span>An editorial history</span><span>Est. 1897 · Memphis, Tennessee</span></div>
-    <h1>The Church of<br>God in Christ</h1>
+    <div class="kicker"><span>The Church of God in Christ — right now</span><span>St. Louis · Convocation Week</span></div>
+    <h1><span class="line"><span class="li">COGIC</span></span><br><span class="line"><span class="li d2"><em>Now.</em></span></span></h1>
     <div class="intro">
-      <p>From a cotton gin in Lexington, Mississippi, to Mason Temple in Memphis and congregations around the world — the story of the largest African American Pentecostal church, and of its founder, Bishop Charles Harrison Mason.</p>
-      <p class="side">A Pentecostal–Holiness movement born in revival: Baptist preachers expelled for preaching sanctification, a five-week visit to Azusa Street that changed everything, and a temple built by sharecroppers' dimes. Told here in chapters, pictures, and a living feed of updates.</p>
+      <p>What's happening in the Church of God in Christ — right now. The gatherings, the statements, and the moments moving the church this week, gathered in one place.</p>
+      <p class="side">A living front page for the church: led this week by the 118th Holy Convocation in St. Louis, fed by the COGIC Newsroom at cogic.org, and updated as news lands. Not a history book — the church, as it happens.</p>
     </div>
-    <a class="pill" href="#story">Start with the story</a>
+    <a class="pill" href="#now">See what's happening</a>
   </div>
   <figure class="hero-img">
-    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Mason_Temple%2C_Church_of_God_in_Christ_Memphis%2C_Tennessee.jpg/1920px-Mason_Temple%2C_Church_of_God_in_Christ_Memphis%2C_Tennessee.jpg" alt="Mason Temple, world headquarters of the Church of God in Christ, Memphis, Tennessee">
-    <figcaption class="wrap"><b>Mason Temple, Memphis.</b> World headquarters of the Church of God in Christ. Photo by Jim Roberts, CC BY-SA 4.0, via Wikimedia Commons.</figcaption>
+    <img data-plx="0.10" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Mason_Temple%2C_Church_of_God_in_Christ_Memphis%2C_Tennessee.jpg/1920px-Mason_Temple%2C_Church_of_God_in_Christ_Memphis%2C_Tennessee.jpg" alt="Mason Temple, world headquarters of the Church of God in Christ, Memphis, Tennessee">
+    <figcaption class="wrap"><b>Mason Temple, Memphis.</b> The church's world headquarters — and still its spiritual home. Photo by Jim Roberts, CC BY-SA 4.0, via Wikimedia Commons.</figcaption>
   </figure>
-</div>
+<div class="marquee" aria-hidden="true"><div class="mq-track"><span>118th Holy Convocation <b>·</b> St. Louis <b>·</b> General Assembly <b>·</b> COGIC Counts <b>·</b> Mason Temple <b>·</b> Memphis <b>·</b> </span><span>118th Holy Convocation <b>·</b> St. Louis <b>·</b> General Assembly <b>·</b> COGIC Counts <b>·</b> Mason Temple <b>·</b> Memphis <b>·</b> </span></div></div>
   <div class="wrap">
     <div class="stats">
-      <div><b>1897</b><span>Founded</span></div>
-      <div><b>6.5M</b><span>Members reported</span></div>
-      <div><b>100+</b><span>Countries reached</span></div>
-      <div><b>1907</b><span>Organized · Memphis</span></div>
+      <div><b><span data-count="6.5" data-dec="1">0</span>M</b><span>Members worldwide</span></div>
+      <div><b><span data-count="100">0</span>+</b><span>Countries reached</span></div>
+      <div><b><span data-count="118">0</span>th</b><span>Holy Convocation</span></div>
+      <div><b>Nov 9–10</b><span>General Assembly · St. Louis</span></div>
     </div>
     <div class="index">
-      <a href="#story"><span class="n">01</span><span class="t">The Story</span><span class="tag">Mason · Jones · Azusa</span></a>
-      <a href="#timeline"><span class="n">02</span><span class="t">Timeline</span><span class="tag">1895 — Today</span></a>
-      <a href="#temple"><span class="n">03</span><span class="t">Mason Temple</span><span class="tag">Memphis · 1945 · 1968</span></a>
-      <a href="#legacy"><span class="n">04</span><span class="t">The Legacy</span><span class="tag">Seal · Sound · Spirit</span></a>
-      <a href="#updates"><span class="n">05</span><span class="t">Updates</span><span class="tag">Live · COGIC &amp; this site</span></a>
+      <a href="#now"><span class="n">01</span><span class="t">Happening Now</span><span class="tag">Convocation · St. Louis</span></a>
+      <a href="#latest"><span class="n">02</span><span class="t">The Latest</span><span class="tag">Live · Updates feed</span></a>
+      <a href="#newsroom"><span class="n">03</span><span class="t">From the Newsroom</span><span class="tag">cogic.org NewsFeed</span></a>
+      <a href="#ahead"><span class="n">04</span><span class="t">Leadership &amp; What's Ahead</span><span class="tag">Sheard · The calendar</span></a>
     </div>
   </div>
 </header>
 
-<section id="story">
+<section id="now">
   <div class="wrap">
-    <div class="head reveal"><h2>The Story</h2><span>Chapter 01</span></div>
-    <div class="story">
-      <figure class="reveal">
-        <img src="https://sacredart.caaar.duke.edu/wp-content/uploads/2023/03/photo-of-bishop-c-mason-of-the-church-of-god-in-christ.original-1.jpg" alt="Framed portrait of Bishop Charles Harrison Mason">
-        <figcaption><b>Bishop Charles Harrison Mason</b> (1864–1961), founder of the Church of God in Christ. Portrait courtesy of the Center for African &amp; African American Research, Duke University.</figcaption>
-      </figure>
+    <div class="head reveal"><h2>Happening Now</h2><span>This Week · St. Louis</span></div>
+    <div class="lead">
+      <div class="nwrap reveal">
+        <a class="ncard" href="https://www.cogic.org/blog/118th-holy-convocation-newsletter/" target="_blank" rel="noopener">
+          <img src="https://www.cogic.org/wp-content/uploads/2026/10/feature-HC2026.jpg" alt="118th Holy Convocation artwork with the COGIC seal and St. Louis skyline">
+          <span class="ov"><h4>118th Holy Convocation</h4><span class="tags"><span>Convocation</span><span>St. Louis</span></span></span>
+        </a>
+        <p class="ncap"><b>Nov 3–10, 2026 · St. Louis.</b> The church's largest gathering, back in St. Louis for the first time since 2019. Artwork: COGIC Newsroom.</p>
+      </div>
       <div class="txt reveal">
-        <p>Charles Harrison Mason was born in Shelby County, Tennessee, to formerly enslaved parents, and began his ministry as a Baptist preacher. In 1895 he joined forces with Mississippi preacher Charles Price Jones, and the two began preaching holiness and entire sanctification — a message their Baptist convention would not tolerate. Both men were expelled for it.</p>
-        <p>Undeterred, they gathered a new fellowship. Revivals held in an abandoned cotton gin in Lexington, Mississippi, drew some sixty converts, and in 1897 the movement was organized. In Little Rock, Arkansas, Mason said God gave him a name for it, drawn from 1 Thessalonians 2:14: the <b>Church of God in Christ</b>.</p>
-        <p>In 1906, Mason traveled to Los Angeles to investigate the Azusa Street Revival led by William J. Seymour. He stayed five weeks and received the baptism of the Holy Spirit. When he brought Pentecostal teaching home, the fellowship split — and in November 1907, in Memphis, Mason reorganized COGIC as a Pentecostal church, becoming its General Overseer and Chief Apostle. He would lead it for 54 years.</p>
-        <p>From Memphis, the church rode the Great Migration north and west, planting congregations in Chicago, New York, Philadelphia, Los Angeles, and beyond — carried by preachers Mason credentialed and by ordinary saints who took their faith with them.</p>
+        <h3>The 118th Holy Convocation is underway — "Answering The Call"</h3>
+        <p>Thousands of saints are gathered in St. Louis this week for the 118th Holy Convocation, the church's largest annual meeting. Services run November 3–8 at America's Center, and about 60,000 delegates are expected across the week.</p>
+        <p>It's COGIC's first St. Louis convocation since 2019 — and the city is now the gathering's home through 2028, after delegates voted in January 2025 to bring it back. The week closes with the General Assembly, November 9–10.</p>
         <dl class="facts">
-          <div><dt>Founder</dt><dd>Bishop Charles Harrison Mason</dd></div>
-          <div><dt>Founded</dt><dd>1897 · Lexington, Mississippi</dd></div>
-          <div><dt>Organized</dt><dd>1907 · Memphis, Tennessee</dd></div>
-          <div><dt>Headquarters</dt><dd>Mason Temple, Memphis</dd></div>
-          <div><dt>Presiding Bishop</dt><dd>Bishop J. Drew Sheard Sr. (since 2021)</dd></div>
-          <div><dt>Members</dt><dd>6.5 million reported worldwide</dd></div>
+          <div><dt>Where</dt><dd>America's Center, St. Louis</dd></div>
+          <div><dt>Services</dt><dd>November 3–8, 2026</dd></div>
+          <div><dt>General Assembly</dt><dd>November 9–10, 2026</dd></div>
+          <div><dt>Theme</dt><dd>"Answering The Call"</dd></div>
+          <div><dt>Expected</dt><dd>About 60,000 delegates</dd></div>
         </dl>
       </div>
     </div>
   </div>
 </section>
 
-<section id="timeline">
+<section id="latest">
   <div class="wrap">
-    <div class="head reveal"><h2>Timeline</h2><span>Chapter 02 · 1895 — Today</span></div>
-    <div class="tl">
-      <div class="ev reveal"><div class="yr">1895</div><div><h3>Mason meets Jones</h3><p>Mason joins forces with Mississippi preacher Charles Price Jones. Together they preach holiness and sanctification across the South, until the Baptist convention expels them for it.</p></div></div>
-      <div class="ev reveal"><div class="yr">1897</div><div><h3>A fellowship in Lexington</h3><p>Revivals in an abandoned cotton gin in Lexington, Mississippi, gather some sixty converts. Mason and Jones organize the fellowship that takes the name Church of God in Christ — Mason founds St. Paul Church in Lexington as its first congregation.</p></div></div>
-      <div class="ev reveal"><div class="yr">1906–07</div><div><h3>Azusa Street changes everything</h3><p>Mason travels to the Azusa Street Revival in Los Angeles, led by William J. Seymour, and receives the baptism of the Holy Spirit. His Pentecostal teaching splits the fellowship in 1907 — Mason keeps the COGIC name and charter, reorganizes the church in Memphis that November, and leads it as the first legally chartered Pentecostal body in the United States.</p></div></div>
-      <div class="ev reveal"><div class="yr">1925</div><div><h3>A temple for the convocation</h3><p>COGIC completes its first national temple in Memphis to host the annual Holy Convocation. The wooden temple burns in 1936 — and the church decides to rebuild in steel and stone.</p></div></div>
-      <div class="ev reveal"><div class="yr">1945</div><div><h3>Mason Temple dedicated</h3><p>The new Mason Temple — with its nearly 4,000 seats, the largest church auditorium of any African American religious group in the country — is dedicated as the church's international headquarters, financed by everyday members: sharecroppers, cotton pickers, and domestic workers who gave what they had.</p></div></div>
-      <div class="ev reveal"><div class="yr">1961</div><div><h3>The founder goes home</h3><p>Bishop Mason dies on November 17, 1961. The movement he led for 54 years has grown to more than 400,000 members and over 4,000 churches, with congregations across the world.</p></div></div>
-      <div class="ev reveal"><div class="yr">1968</div><div><h3>"I've Been to the Mountaintop"</h3><p>On April 3, 1968, Dr. Martin Luther King Jr. delivers his final speech at Mason Temple, standing with Memphis sanitation workers on strike. He is assassinated the next day.</p></div></div>
-      <div class="ev reveal"><div class="yr">Today</div><div><h3>The fire keeps spreading</h3><p>Under Presiding Bishop J. Drew Sheard Sr., COGIC counts a reported 6.5 million members in more than 100 countries. The Holy Convocation — held in Memphis for over a century — returns to St. Louis for 2026–2028, and Mason Temple remains the church's spiritual home.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="temple">
-  <div class="wrap">
-    <div class="head reveal"><h2>Mason Temple</h2><span>Chapter 03 · Memphis</span></div>
-    <figure class="temple-img reveal">
-      <img src="https://bunny-wp-pullzone-cjamrcljf0.b-cdn.net/wp-content/uploads/2021/02/elder-kelsey-church-of-god-in-christ_001-600x338.jpg" alt="Elder Samuel Kelsey preaching at a Church of God in Christ service in Mississippi, 1942">
-      <figcaption><b>Worship, 1942.</b> Elder Samuel Kelsey preaching at a Church of God in Christ service in Leake County, Mississippi. Photo: Library of Congress, via the New Georgia Encyclopedia.</figcaption>
-    </figure>
-    <div class="temple-grid">
-      <div class="reveal">
-        <p>Built between 1940 and 1945 — in the middle of a world war and a shortage of building materials — Mason Temple was paid for by the people of the church, many of them poor, who believed the movement deserved a house. When it opened, it was the largest church auditorium of any African American religious group in the United States.</p>
-        <p>A generation later, the temple became a landmark of a second movement. During the 1968 Memphis sanitation workers' strike, Mason Temple was the movement's meeting place — and on April 3, it hosted Dr. King's last speech.</p>
-        <p>It still serves as COGIC's international headquarters: a room where revival history and civil rights history share the same walls.</p>
-      </div>
-      <blockquote class="reveal">"Well, I don't know what will happen now. We've got some difficult days ahead. But it really doesn't matter with me now, because I've been to the mountaintop."
-        <footer>— Dr. Martin Luther King Jr., Mason Temple, April 3, 1968</footer>
-      </blockquote>
-    </div>
-  </div>
-</section>
-
-<section id="legacy">
-  <div class="wrap">
-    <div class="head reveal"><h2>The Legacy</h2><span>Chapter 04 · Seal · Sound · Spirit</span></div>
-    <div class="seal-row reveal">
-      <img src="https://sgsjcogic.org/wp-content/uploads/2018/03/COGIC_SEAL.png" alt="The official seal of the Church of God in Christ, Inc.">
-      <div>
-        <h3>The Seal of the Church</h3>
-        <p>The official seal — designed in 1973 and adopted by the General Assembly in 1981 — pictures a shaft of garnered wheat: <b>the people of the church</b>. The rope binding the shaft is Bishop Mason, who at the call of the Lord banded the churches together in 1907. The date marks his baptism in the Holy Ghost in March 1907, and the rain behind the wheat is the <b>Latter Rain</b> — the end-time revivals that gave birth to the Pentecostal movement.</p>
-        <p style="color:var(--muted);font-size:.88rem">Seal © Church of God in Christ, Inc., shown here for educational identification. This is an unofficial tribute site and is not affiliated with COGIC, Inc.</p>
-      </div>
-    </div>
-    <div class="cards">
-      <div class="card reveal">
-        <div class="icon"><svg viewBox="0 0 24 24"><path d="M9 18V6l10-2v11.5"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="15.5" r="2.5"/></svg></div>
-        <h3>The Sound</h3>
-        <p>COGIC sanctuaries became conservatories of gospel music. The Clark Sisters, the Winans family, and generations of church musicians carried the COGIC sound — Hammond organ, tambourine, and soaring choir — into the wider world.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3c1 3-2 4.2-2 6.5A4.5 4.5 0 0 0 12 18a4.5 4.5 0 0 0 2-8.5C13.4 7 14 5 12 3z"/><path d="M5 21h14"/></svg></div>
-        <h3>The Spirit</h3>
-        <p>At the center, unchanged since Azusa Street: a Pentecostal faith in the baptism of the Holy Spirit, holiness of life, and a church where everybody — sharecropper or scholar — has a testimony.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.3 3.6 5.1 3.6 8.5s-1.2 6.2-3.6 8.5c-2.4-2.3-3.6-5.1-3.6-8.5S9.6 5.8 12 3.5z"/></svg></div>
-        <h3>The Spread</h3>
-        <p>From ten congregations in 1907 to thousands today — across the United States and in more than 100 countries, gathered every year at the Holy Convocation, the church's largest annual meeting.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="updates">
-  <div class="wrap">
-    <div class="head reveal"><h2>Updates</h2><span>Chapter 05 · Live</span></div>
-    <p class="how">What's happening in the church right now, and what's changed on this site. Church news comes from the <b>COGIC Newsroom</b> — the denomination's own NewsFeed at cogic.org — and every change to this page posts itself here from GitHub.</p>
-
-    <p class="news-intro"><b>From the Newsroom.</b> Fresh posts from the COGIC NewsFeed — hover a card to read more, select it to open the story at cogic.org.</p>
-    <div class="news-grid">
-      <div class="nwrap wide">
-        <a class="ncard" href="https://www.cogic.org/blog/a-moment-of-honor-a-moment-of-humility/" target="_blank" rel="noopener">
-          <img src="https://www.cogic.org/wp-content/uploads/2026/09/BOB-Conference-2026-feature.jpg" alt="Presiding Bishop Emeritus Charles E. Blake Sr. seated with Presiding Bishop J. Drew Sheard">
-          <span class="ov"><h4>A Moment of Honor, A Moment of Humility</h4><span class="tags"><span>Board of Bishops</span><span>Newsroom</span></span></span>
-        </a>
-        <p class="ncap"><b>September 2026.</b> The Board of Bishops pauses to honor Presiding Bishop Emeritus Charles E. Blake Sr. — with Bishop Sheard himself giving up the Presiding Bishop's chair for the man who shepherded the church before him. Photo: COGIC Newsroom.</p>
-      </div>
-      <div class="nwrap">
-        <a class="ncard" href="https://www.cogic.org/blog/118th-holy-convocation-newsletter/" target="_blank" rel="noopener">
-          <img src="https://www.cogic.org/wp-content/uploads/2026/10/feature-HC2026.jpg" alt="118th Holy Convocation artwork with the COGIC seal and St. Louis skyline">
-          <span class="ov"><h4>118th Holy Convocation</h4><span class="tags"><span>Convocation</span><span>St. Louis</span></span></span>
-        </a>
-        <p class="ncap"><b>Nov 3–10, 2026 · St. Louis.</b> The church's largest gathering returns to St. Louis. Artwork: COGIC Newsroom.</p>
-      </div>
-      <div class="nwrap">
-        <a class="ncard" href="https://www.cogic.org/blog/2026-mason-day-celebration/" target="_blank" rel="noopener">
-          <img src="https://www.cogic.org/wp-content/uploads/2026/08/feature-Mason-Day-2026.jpg" alt="Mason Day Celebration flyer with Bishop Mason, Bishop Sheard, and Bishop Porter">
-          <span class="ov"><h4>Mason Day Celebration</h4><span class="tags"><span>Mason Temple</span><span>Memphis</span></span></span>
-        </a>
-        <p class="ncap"><b>Sept 3, 2026 · Mason Temple.</b> A night at the historic temple honoring the founder. Flyer: COGIC Newsroom.</p>
-      </div>
-      <div class="nwrap">
-        <a class="ncard" href="https://www.cogic.org/blog/2026-cogic-counts-getting-souls-to-the-polls/" target="_blank" rel="noopener">
-          <img src="https://www.cogic.org/wp-content/uploads/2026/10/feature-COGIC-Counts.jpg" alt="COGIC Counts — Getting Souls to the Polls campaign artwork">
-          <span class="ov"><h4>COGIC Counts: Souls to the Polls</h4><span class="tags"><span>Civic</span><span>Your Voice · Your Vote</span></span></span>
-        </a>
-        <p class="ncap"><b>2026 midterms.</b> The church mobilizes saints to vote — even with thousands gathered in St. Louis on Election Day. Artwork: COGIC Newsroom.</p>
-      </div>
-    </div>
+    <div class="head reveal"><h2>The Latest</h2><span>Live · Updated as it lands</span></div>
+    <p class="how">The newest church news first — statements, gatherings, and moves from the <b>COGIC Newsroom</b>, the denomination's own NewsFeed at cogic.org. Every change to this page also posts itself here from GitHub.</p>
     <div class="upd-grid">
       <div class="upd-col">
         <h3>COGIC Updates</h3>
@@ -413,17 +293,83 @@
   </div>
 </section>
 
+<section id="newsroom">
+  <div class="wrap">
+    <div class="head reveal"><h2>From the Newsroom</h2><span>Fresh · cogic.org</span></div>
+    <p class="news-intro"><b>Straight from the NewsFeed.</b> Recent posts from the COGIC Newsroom — hover a card to read more, select it to open the story at cogic.org.</p>
+    <div class="news-grid">
+      <div class="nwrap wide">
+        <a class="ncard" href="https://www.cogic.org/blog/a-moment-of-honor-a-moment-of-humility/" target="_blank" rel="noopener">
+          <img src="https://www.cogic.org/wp-content/uploads/2026/09/BOB-Conference-2026-feature.jpg" alt="Presiding Bishop Emeritus Charles E. Blake Sr. seated with Presiding Bishop J. Drew Sheard">
+          <span class="ov"><h4>A Moment of Honor, A Moment of Humility</h4><span class="tags"><span>Board of Bishops</span><span>Newsroom</span></span></span>
+        </a>
+        <p class="ncap"><b>September 2026.</b> The Board of Bishops pauses to honor Presiding Bishop Emeritus Charles E. Blake Sr. — with Bishop Sheard himself giving up the Presiding Bishop's chair for the man who shepherded the church before him. Photo: COGIC Newsroom.</p>
+      </div>
+      <div class="nwrap">
+        <a class="ncard" href="https://www.cogic.org/blog/2026-cogic-counts-getting-souls-to-the-polls/" target="_blank" rel="noopener">
+          <img src="https://www.cogic.org/wp-content/uploads/2026/10/feature-COGIC-Counts.jpg" alt="COGIC Counts — Getting Souls to the Polls campaign artwork">
+          <span class="ov"><h4>COGIC Counts: Souls to the Polls</h4><span class="tags"><span>Civic</span><span>Your Voice · Your Vote</span></span></span>
+        </a>
+        <p class="ncap"><b>2026 midterms.</b> The church mobilizes saints to vote — even with thousands gathered in St. Louis on Election Day. Artwork: COGIC Newsroom.</p>
+      </div>
+      <div class="nwrap">
+        <a class="ncard" href="https://www.cogic.org/blog/2026-mason-day-celebration/" target="_blank" rel="noopener">
+          <img src="https://www.cogic.org/wp-content/uploads/2026/08/feature-Mason-Day-2026.jpg" alt="Mason Day Celebration flyer with Bishop Mason, Bishop Sheard, and Bishop Porter">
+          <span class="ov"><h4>Mason Day Celebration</h4><span class="tags"><span>Mason Temple</span><span>Memphis</span></span></span>
+        </a>
+        <p class="ncap"><b>Sept 3, 2026 · Mason Temple.</b> A night at the historic temple honoring the founder. Flyer: COGIC Newsroom.</p>
+      </div>
+      <div class="nwrap">
+        <a class="ncard" href="https://www.cogic.org/blog/category/presiding-bishop/" target="_blank" rel="noopener">
+          <img src="https://bunny-wp-pullzone-cjamrcljf0.b-cdn.net/wp-content/uploads/2021/02/elder-kelsey-church-of-god-in-christ_001-600x338.jpg" alt="Elder Samuel Kelsey preaching at a Church of God in Christ service in Mississippi, 1942">
+          <span class="ov"><h4>From the Presiding Bishop</h4><span class="tags"><span>Statements</span><span>Memphis</span></span></span>
+        </a>
+        <p class="ncap"><b>Statements &amp; communiques.</b> Words from the Presiding Bishop's office — including the statement marking twenty-five years since September 11, 2001. Photo: Library of Congress, via the New Georgia Encyclopedia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ahead">
+  <div class="wrap">
+    <div class="head reveal"><h2>Leadership &amp; What's Ahead</h2><span>The Church Today</span></div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c.8-3.4 3.6-5 7-5s6.2 1.6 7 5"/></svg></div>
+        <h3>Presiding Bishop</h3>
+        <p>Bishop J. Drew Sheard Sr. leads the church today — elected March 27, 2021, and re-elected by acclamation on November 12, 2024 to a second four-year term as Presiding Bishop and Chief Apostle.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 20V9l8-5 8 5v11"/><path d="M9.5 20v-5h5v5"/></svg></div>
+        <h3>Home Base</h3>
+        <p>Mason Temple in Memphis remains the church's international headquarters and spiritual home — even as the Holy Convocation gathers in St. Louis through 2028.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.3 3.6 5.1 3.6 8.5s-1.2 6.2-3.6 8.5c-2.4-2.3-3.6-5.1-3.6-8.5S9.6 5.8 12 3.5z"/></svg></div>
+        <h3>The Church Today</h3>
+        <p>A reported 6.5 million members in more than 100 countries — thousands of congregations, one faith, gathered every year at the Holy Convocation, the church's largest annual meeting.</p>
+      </div>
+    </div>
+    <div class="tl" style="margin-top:3.5rem">
+      <div class="ev reveal"><div class="yr">Nov 9–10</div><div><h3>General Assembly — St. Louis</h3><p>The 118th Holy Convocation closes with the General Assembly, November 9–10, 2026, in St. Louis — the church's governing body in session as convocation week wraps up.</p></div></div>
+      <div class="ev reveal"><div class="yr">2027</div><div><h3>Convocation returns to St. Louis</h3><p>Year two of the St. Louis run. Delegates voted in January 2025 to hold the Holy Convocation in St. Louis for 2026–2028, its home from 2010 to 2019.</p></div></div>
+      <div class="ev reveal"><div class="yr">2028</div><div><h3>Final year of the St. Louis run</h3><p>The third St. Louis convocation in a row — and the last under the current vote. Where the gathering goes next will be a story of its own.</p></div></div>
+    </div>
+  </div>
+</section>
+
 <footer class="site">
   <div class="wrap cols">
-    <img src="https://sgsjcogic.org/wp-content/uploads/2018/03/COGIC_SEAL.png" alt="Seal of the Church of God in Christ">
+    <img class="flogo" src="logo.png" alt="COGIC NOW logo" onerror="this.remove()">
     <p>
-      An unofficial educational tribute, made with respect — not affiliated with the Church of God in Christ, Inc.<br>
-      Photos: Mason Temple by Jim Roberts (CC BY-SA 4.0, Wikimedia Commons) · Bishop Mason portrait, Center for African &amp; African American Research, Duke University · Elder Kelsey service photo, Library of Congress via New Georgia Encyclopedia · COGIC seal © COGIC, Inc.<br>
-      Sources: <a href="https://blackpast.org/african-american-history/church-god-christ-1907/" target="_blank" rel="noopener">BlackPast</a> · <a href="https://sah-archipedia.org/buildings/TN-01-157-0059" target="_blank" rel="noopener">SAH Archipedia</a> · <a href="https://www.thearda.com/us-religion/history/timelines/entry?etype=1&eid=74" target="_blank" rel="noopener">ARDA</a> · <a href="https://www.cogic.org" target="_blank" rel="noopener">cogic.org</a><br>
-      COGIC · A History — built by <a href="https://github.com/dav256">dav256</a>
+      COGIC NOW — an unofficial front page for the Church of God in Christ, made with respect. Not affiliated with the Church of God in Christ, Inc. For official news, visit <a href="https://www.cogic.org" target="_blank" rel="noopener">cogic.org</a>.<br>
+      Photos: Mason Temple by Jim Roberts (CC BY-SA 4.0, Wikimedia Commons) · Newsroom artwork and photos © COGIC Newsroom, cogic.org · Elder Kelsey service photo, Library of Congress via New Georgia Encyclopedia · COGIC seal © COGIC, Inc.<br>
+      Sources: <a href="https://www.cogic.org" target="_blank" rel="noopener">cogic.org</a> · <a href="https://stlargusnews.com/2026/10/28/the-st-louis-argus-welcomes-the-118th-cogic-holy-convocation-to-st-louis/" target="_blank" rel="noopener">St. Louis Argus</a><br>
+      COGIC NOW — built by <a href="https://github.com/dav256">dav256</a>
     </p>
   </div>
-  </footer>
+  <div class="bigword" aria-hidden="true">COGIC NOW</div>
+</footer>
 
 <script>
   const fmt = d => new Date(d + (d.length === 10 ? "T12:00:00" : "")).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
@@ -471,8 +417,40 @@
 </script>
 
 <script>
-  const nav = document.querySelector("nav");
-  addEventListener("scroll", () => { nav.classList.toggle("scrolled", scrollY > 12); }, { passive: true });
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // stagger what's-ahead reveals
+  document.querySelectorAll(".tl .ev").forEach((el, i) => el.style.transitionDelay = Math.min(i * 60, 360) + "ms");
+  // animated counters
+  const cio = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return; cio.unobserve(e.target);
+    const el = e.target, end = parseFloat(el.dataset.count), dec = +(el.dataset.dec || 0), t0 = performance.now();
+    if (reduce) { el.textContent = end.toFixed(dec); return; }
+    (function tick(t) {
+      const p = Math.min((t - t0) / 1500, 1), ease = 1 - Math.pow(1 - p, 3);
+      el.textContent = (end * ease).toFixed(dec);
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }), { threshold: .4 });
+  document.querySelectorAll("[data-count]").forEach(el => cio.observe(el));
+  // nav state, progress bar, parallax
+  const nav = document.querySelector("nav"), bar = document.getElementById("progress");
+  const plx = [...document.querySelectorAll("[data-plx]")];
+  let ticking = false;
+  function onScroll() {
+    const y = scrollY;
+    nav.classList.toggle("scrolled", y > 12);
+    const hgt = document.documentElement.scrollHeight - innerHeight;
+    bar.style.width = (hgt > 0 ? (y / hgt) * 100 : 0) + "%";
+    if (!reduce) plx.forEach(img => {
+      const r = img.parentElement.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) return;
+      const off = (r.top + r.height / 2 - innerHeight / 2) * parseFloat(img.dataset.plx);
+      img.style.setProperty("--py", Math.max(-42, Math.min(42, off)) + "px");
+    });
+    ticking = false;
+  }
+  addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
 </script>
 </body>
 </html>
