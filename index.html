@@ -214,6 +214,57 @@
     .reveal img{clip-path:none;transition:none}
     .hero-img img{transform:none}
   }
+
+  /* ---- newsroom ---- */
+  .nr-plate{border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);padding:1.1rem 0 1.2rem;margin-bottom:0}
+  .nr-plate-top{display:flex;justify-content:space-between;gap:1rem;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:.7rem}
+  .nr-title{font-family:var(--serif);font-weight:900;letter-spacing:-.02em;font-size:clamp(2.8rem,7vw,4.6rem);line-height:1;margin:.9rem 0 .8rem}
+  .nr-plate-meta{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--muted);font-size:.82rem;letter-spacing:.06em}
+  .nr-plate-meta b{color:var(--ink)}
+  .nr-ticker{display:flex;align-items:center;gap:1rem;border-bottom:1px solid var(--line);padding:.65rem 0;overflow:hidden}
+  .nr-live{flex:none;background:var(--wheat);color:var(--ink);font-size:.64rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;padding:.32rem .6rem;border-radius:3px}
+  .nr-ticker-view{overflow:hidden;flex:1}
+  .nr-ticker-track{display:flex;width:max-content;animation:mq 36s linear infinite;align-items:baseline}
+  .nr-ticker:hover .nr-ticker-track{animation-play-state:paused}
+  .nr-ticker-track span{font-size:.86rem;font-weight:600;white-space:nowrap;color:#35355c}
+  .nr-ticker-track b{color:var(--gold);padding:0 .8rem}
+  .nr-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:3rem;margin-top:2.6rem;align-items:start}
+  @media(max-width:860px){.nr-grid{grid-template-columns:1fr}}
+  .nr-kicker{font-size:.68rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem}
+  .nr-lead-img{display:block;border-radius:12px;overflow:hidden}
+  .nr-lead-img img{width:100%;height:400px;object-fit:cover;transition:transform .8s cubic-bezier(.19,.7,.22,1)}
+  .nr-lead-img:hover img{transform:scale(1.03)}
+  @media(max-width:860px){.nr-lead-img img{height:250px}}
+  .nr-cutline{color:var(--muted);font-size:.78rem;line-height:1.6;margin:.6rem 0 1.1rem}
+  .nr-lead h3{font-family:var(--serif);font-weight:800;letter-spacing:-.015em;font-size:clamp(1.7rem,3.4vw,2.4rem);line-height:1.15;margin-bottom:.6rem}
+  .nr-lead h3 a{text-decoration:none}
+  .nr-lead h3 a:hover{text-decoration:underline}
+  .nr-byline{font-size:.7rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:.8rem}
+  .nr-excerpt{color:#35355c;line-height:1.8;font-size:1rem;max-width:58ch}
+  .nr-more{display:inline-block;margin-top:1rem;font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:none}
+  .nr-more:hover{text-decoration:underline}
+  .nr-rail{border-left:1px solid var(--line);padding-left:2rem}
+  @media(max-width:860px){.nr-rail{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:1.6rem}}
+  .nr-rail-h{font-family:var(--serif);font-weight:800;font-size:1.05rem;letter-spacing:.14em;text-transform:uppercase;border-bottom:2px solid var(--ink);padding-bottom:.6rem}
+  .nr-wire{list-style:none}
+  .nr-wire li{border-bottom:1px solid var(--line)}
+  .nr-wire a{display:block;padding:.95rem 0;text-decoration:none}
+  .nr-wire time{display:block;font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.35rem}
+  .nr-wire span{font-weight:600;font-size:.99rem;line-height:1.45;color:var(--ink)}
+  .nr-wire a:hover span{text-decoration:underline}
+  .nr-all{display:inline-block;margin-top:1.2rem;font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--wheat);padding-bottom:.2rem}
+  .nr-note{color:var(--muted);font-size:.8rem;line-height:1.7;margin-top:1.4rem}
+  .nr-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:2.2rem;margin-top:3rem;border-top:1px solid var(--ink);padding-top:2.2rem}
+  @media(max-width:860px){.nr-cols{grid-template-columns:1fr}}
+  .nr-story-img{display:block;border-radius:12px;overflow:hidden;margin-bottom:1rem}
+  .nr-story-img img{width:100%;height:180px;object-fit:cover;transition:transform .8s cubic-bezier(.19,.7,.22,1)}
+  .nr-story-img:hover img{transform:scale(1.04)}
+  .nr-story .nr-kicker{margin-bottom:.5rem}
+  .nr-story h4{font-family:var(--serif);font-weight:800;font-size:1.25rem;line-height:1.25;margin-bottom:.5rem}
+  .nr-story h4 a{text-decoration:none}
+  .nr-story h4 a:hover{text-decoration:underline}
+  .nr-story p{color:#54546e;line-height:1.7;font-size:.92rem}
+  @media(prefers-reduced-motion:reduce){.nr-ticker-track{animation:none}}
 </style>
 </head>
 <body>
@@ -308,37 +359,57 @@
 
 <section id="newsroom">
   <div class="wrap">
-    <div class="head reveal"><h2>From the Newsroom</h2><span>Fresh · cogic.org</span></div>
-    <p class="news-intro"><b>Straight from the NewsFeed.</b> Recent posts from the COGIC Newsroom — hover a card to read more, select it to open the story at cogic.org.</p>
-    <div class="news-grid">
-      <div class="nwrap wide">
-        <a class="ncard" href="https://www.cogic.org/blog/a-moment-of-honor-a-moment-of-humility/" target="_blank" rel="noopener">
-          <img src="https://www.cogic.org/wp-content/uploads/2026/09/BOB-Conference-2026-feature.jpg" alt="Presiding Bishop Emeritus Charles E. Blake Sr. seated with Presiding Bishop J. Drew Sheard">
-          <span class="ov"><h4>A Moment of Honor, A Moment of Humility</h4><span class="tags"><span>Board of Bishops</span><span>Newsroom</span></span></span>
-        </a>
-        <p class="ncap"><b>September 2026.</b> The Board of Bishops pauses to honor Presiding Bishop Emeritus Charles E. Blake Sr. — with Bishop Sheard himself giving up the Presiding Bishop's chair for the man who shepherded the church before him. Photo: COGIC Newsroom.</p>
-      </div>
-      <div class="nwrap">
-        <a class="ncard" href="https://www.cogic.org/blog/2026-cogic-counts-getting-souls-to-the-polls/" target="_blank" rel="noopener">
-          <img src="https://www.cogic.org/wp-content/uploads/2026/10/feature-COGIC-Counts.jpg" alt="COGIC Counts — Getting Souls to the Polls campaign artwork">
-          <span class="ov"><h4>COGIC Counts: Souls to the Polls</h4><span class="tags"><span>Civic</span><span>Your Voice · Your Vote</span></span></span>
-        </a>
-        <p class="ncap"><b>2026 midterms.</b> The church mobilizes saints to vote — even with thousands gathered in St. Louis on Election Day. Artwork: COGIC Newsroom.</p>
-      </div>
-      <div class="nwrap">
-        <a class="ncard" href="https://www.cogic.org/blog/2026-mason-day-celebration/" target="_blank" rel="noopener">
-          <img src="https://www.cogic.org/wp-content/uploads/2026/08/feature-Mason-Day-2026.jpg" alt="Mason Day Celebration flyer with Bishop Mason, Bishop Sheard, and Bishop Porter">
-          <span class="ov"><h4>Mason Day Celebration</h4><span class="tags"><span>Mason Temple</span><span>Memphis</span></span></span>
-        </a>
-        <p class="ncap"><b>Sept 3, 2026 · Mason Temple.</b> A night at the historic temple honoring the founder. Flyer: COGIC Newsroom.</p>
-      </div>
-      <div class="nwrap">
-        <a class="ncard" href="https://www.cogic.org/blog/category/presiding-bishop/" target="_blank" rel="noopener">
-          <img src="https://bunny-wp-pullzone-cjamrcljf0.b-cdn.net/wp-content/uploads/2021/02/elder-kelsey-church-of-god-in-christ_001-600x338.jpg" alt="Elder Samuel Kelsey preaching at a Church of God in Christ service in Mississippi, 1942">
-          <span class="ov"><h4>From the Presiding Bishop</h4><span class="tags"><span>Statements</span><span>Memphis</span></span></span>
-        </a>
-        <p class="ncap"><b>Statements &amp; communiques.</b> Words from the Presiding Bishop's office — including the statement marking twenty-five years since September 11, 2001. Photo: Library of Congress, via the New Georgia Encyclopedia.</p>
-      </div>
+    <div class="nr-plate reveal">
+      <div class="nr-plate-top"><span>COGIC Newsroom</span><span>Memphis, Tenn.</span></div>
+      <h2 class="nr-title">The Newsroom</h2>
+      <div class="nr-plate-meta"><span>Filed from <b>cogic.org</b> — the denomination's own NewsFeed</span><span id="nr-date">Memphis, Tenn.</span></div>
+    </div>
+    <div class="nr-ticker" aria-label="Latest headlines">
+      <span class="nr-live">The Wire</span>
+      <div class="nr-ticker-view"><div class="nr-ticker-track"><span>General Assembly meets Nov 9–10 in St. Louis to close Convocation week</span><b>·</b><span>COGIC Counts: Getting Souls to the Polls</span><b>·</b><span>Presiding Bishop's statement marks 25 years since 9/11</span><b>·</b><span>Board of Bishops honors Presiding Bishop Emeritus Blake</span><b>·</b><span>General Assembly meets Nov 9–10 in St. Louis to close Convocation week</span><b>·</b><span>COGIC Counts: Getting Souls to the Polls</span><b>·</b><span>Presiding Bishop's statement marks 25 years since 9/11</span><b>·</b><span>Board of Bishops honors Presiding Bishop Emeritus Blake</span><b>·</b></div></div>
+    </div>
+    <div class="nr-grid">
+      <article class="nr-lead reveal">
+        <p class="nr-kicker">Top Story · Board of Bishops</p>
+        <a class="nr-lead-img" href="https://www.cogic.org/blog/a-moment-of-honor-a-moment-of-humility/" target="_blank" rel="noopener"><img src="https://www.cogic.org/wp-content/uploads/2026/09/BOB-Conference-2026-feature.jpg" alt="Presiding Bishop Emeritus Charles E. Blake Sr. seated with Presiding Bishop J. Drew Sheard"></a>
+        <p class="nr-cutline">Presiding Bishop Emeritus Charles E. Blake Sr., seated with Presiding Bishop J. Drew Sheard. Photo: COGIC Newsroom.</p>
+        <h3><a href="https://www.cogic.org/blog/a-moment-of-honor-a-moment-of-humility/" target="_blank" rel="noopener">A Moment of Honor, A Moment of Humility</a></h3>
+        <p class="nr-byline">COGIC Newsroom · September 2026 · Memphis</p>
+        <p class="nr-excerpt">The Board of Bishops pauses to honor Presiding Bishop Emeritus Charles E. Blake Sr. — with Bishop Sheard himself giving up the Presiding Bishop's chair for the man who shepherded the church before him.</p>
+        <a class="nr-more" href="https://www.cogic.org/blog/a-moment-of-honor-a-moment-of-humility/" target="_blank" rel="noopener">Read the full story →</a>
+      </article>
+      <aside class="nr-rail reveal">
+        <h3 class="nr-rail-h">Headlines</h3>
+        <ul class="nr-wire">
+          <li><a href="https://stlargusnews.com/2026/10/28/the-st-louis-argus-welcomes-the-118th-cogic-holy-convocation-to-st-louis/" target="_blank" rel="noopener"><time>Nov 3, 2026 · Holy Convocation</time><span>118th Holy Convocation — "Answering The Call," St. Louis, November 3–10</span></a></li>
+          <li><a href="https://www.cogic.org/blog/2026-cogic-counts-getting-souls-to-the-polls/" target="_blank" rel="noopener"><time>Nov 3, 2026 · Civic</time><span>COGIC Counts: Getting Souls to the Polls</span></a></li>
+          <li><a href="https://www.cogic.org/blog/category/presiding-bishop/" target="_blank" rel="noopener"><time>Sep 11, 2026 · Statement</time><span>Presiding Bishop's statement on the 25th anniversary of 9/11</span></a></li>
+          <li><a href="https://www.einpresswire.com/article_print/776994415/church-of-god-in-christ-general-assembly-votes-to-return-the-holy-convocation-to-st-louis-missouri-for-2026-2028" target="_blank" rel="noopener"><time>Jan 14, 2025 · News</time><span>General Assembly votes: Convocation returns to St. Louis, 2026–2028</span></a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Church_of_God_in_Christ" target="_blank" rel="noopener"><time>Nov 12, 2024 · Leadership</time><span>Bishop Sheard re-elected Presiding Bishop</span></a></li>
+        </ul>
+        <a class="nr-all" href="https://www.cogic.org/blog/category/cogic-newsfeed-2/" target="_blank" rel="noopener">All stories at cogic.org →</a>
+        <p class="nr-note">Stories are filed by the COGIC Newsroom at cogic.org. COGIC NOW gathers them here with credit, and every headline links back to the source.</p>
+      </aside>
+    </div>
+    <div class="nr-cols">
+      <article class="nr-story reveal">
+        <a class="nr-story-img" href="https://www.cogic.org/blog/2026-cogic-counts-getting-souls-to-the-polls/" target="_blank" rel="noopener"><img src="https://www.cogic.org/wp-content/uploads/2026/10/feature-COGIC-Counts.jpg" alt="COGIC Counts — Getting Souls to the Polls campaign artwork"></a>
+        <p class="nr-kicker">Civic · 2026 Midterms</p>
+        <h4><a href="https://www.cogic.org/blog/2026-cogic-counts-getting-souls-to-the-polls/" target="_blank" rel="noopener">COGIC Counts: Souls to the Polls</a></h4>
+        <p>The church mobilizes saints to vote — even with thousands gathered in St. Louis on Election Day. Artwork: COGIC Newsroom.</p>
+      </article>
+      <article class="nr-story reveal">
+        <a class="nr-story-img" href="https://www.cogic.org/blog/2026-mason-day-celebration/" target="_blank" rel="noopener"><img src="https://www.cogic.org/wp-content/uploads/2026/08/feature-Mason-Day-2026.jpg" alt="Mason Day Celebration flyer with Bishop Mason, Bishop Sheard, and Bishop Porter"></a>
+        <p class="nr-kicker">Mason Temple · Sept 3, 2026</p>
+        <h4><a href="https://www.cogic.org/blog/2026-mason-day-celebration/" target="_blank" rel="noopener">Mason Day Celebration</a></h4>
+        <p>A night at the historic temple honoring the founder. Flyer: COGIC Newsroom.</p>
+      </article>
+      <article class="nr-story reveal">
+        <a class="nr-story-img" href="https://www.cogic.org/blog/category/presiding-bishop/" target="_blank" rel="noopener"><img src="https://bunny-wp-pullzone-cjamrcljf0.b-cdn.net/wp-content/uploads/2021/02/elder-kelsey-church-of-god-in-christ_001-600x338.jpg" alt="Elder Samuel Kelsey preaching at a Church of God in Christ service in Mississippi, 1942"></a>
+        <p class="nr-kicker">Statements · Memphis</p>
+        <h4><a href="https://www.cogic.org/blog/category/presiding-bishop/" target="_blank" rel="noopener">From the Presiding Bishop</a></h4>
+        <p>Words from the Presiding Bishop's office — including the statement marking twenty-five years since September 11, 2001. Photo: Library of Congress, via the New Georgia Encyclopedia.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -387,6 +458,8 @@
   const fmt = d => new Date(d + (d.length === 10 ? "T12:00:00" : "")).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
   const esc = s => s.replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
+  const nd = document.getElementById("nr-date");
+  if (nd) nd.textContent = "Memphis, Tenn. · " + new Date().toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
   // COGIC updates — rendered from updates.json in this repo
   fetch("updates.json")
     .then(r => r.json())
